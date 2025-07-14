@@ -31,10 +31,10 @@ if (!$results) {
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Sno.</th>
                                 <th>Username</th>
                                 <th>Email</th>
-                                <th>Contact</th>
+                                <th>Voting ID</th>
                                 <th>Role</th>
                                 <th>Photo</th>
                             </tr>

@@ -50,7 +50,7 @@ $candidates = mysqli_query($connect, $sql);
         <div class="card">
             <div class="card-header">
                 <h4>🗳️ Vote for your Candidate</h4>
-                <a href="../dashboard.html" class="btn btn-sm btn-secondary float-end">Back to Dashboard</a>
+                <a href="../dashboard.php" class="btn btn-sm btn-secondary float-end">Back to Dashboard</a>
             </div>
             <div class="card-body">
                 <!-- Simple stats display -->
@@ -63,7 +63,7 @@ $candidates = mysqli_query($connect, $sql);
                 <?php if (!$logged_in): ?>
                     <div class="alert alert-warning">
                         <h5>You need to login first!</h5>
-                        <p>Please <a href="../index.html">login</a> to vote.</p>
+                        <p>Please <a href="../index.php">login</a> to vote.</p>
                     </div>
                 
                 <!-- Already voted message -->
@@ -99,7 +99,7 @@ $candidates = mysqli_query($connect, $sql);
                                                         <div>Votes: <span class="badge bg-secondary"><?php echo $candidate['votes']; ?></span></div>
                                                         
                                                         <!-- Show status -->
-                                                        <?php if (isset($candidate['status']) && $candidate['status'] == 1): ?>
+                                                        <?php if (isset($candidate['status']) && $candidate['status'] == 0): ?>
                                                             <span class="badge bg-success">Active</span>
                                                         <?php else: ?>
                                                             <span class="badge bg-danger">Inactive</span>

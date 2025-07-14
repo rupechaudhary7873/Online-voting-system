@@ -103,7 +103,7 @@ if (isset($_SESSION['user_id'])) {
                                         </div>
                                     </td>
                                     <td>
-                                        <?php if ($candidate['status'] == 1): ?>
+                                        <?php if ($candidate['status'] == 0): ?>
                                             <span class="badge bg-success">Active</span>
                                         <?php else: ?>
                                             <span class="badge bg-danger">Inactive</span>
@@ -144,7 +144,7 @@ if (isset($_SESSION['user_id'])) {
             </div>
             <div class="card-footer text-center">
                 <a href="voting.php" class="btn btn-primary me-2">Go to Voting</a>
-                <a href="../dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+                <a href="../dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
             </div>
         </div>
     </div>

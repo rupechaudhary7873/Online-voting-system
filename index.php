@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Online Voting System</title>
+    <title>Online Voting System - Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body class="d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h3>User Registration</h3>
+                        <h3>Online Voting System - Login</h3>
                     </div>
                     <div class="card-body">
-                        <!-- Registration Form -->
-                        <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                        <!-- Login Form -->
+                        <form action="api/login.php" method="POST">
                             
                             <!-- Username -->
                             <div class="mb-3">
@@ -32,34 +34,6 @@
                                        placeholder="Enter your password" required>
                             </div>
                             
-                            <!-- Confirm Password -->
-                            <div class="mb-3">
-                                <label for="confirm_password" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" 
-                                       placeholder="Confirm your password" required>
-                            </div>
-                            
-                            <!-- Email -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" 
-                                       placeholder="Enter your email" required>
-                            </div>
-                            
-                            <!-- Contact -->
-                            <div class="mb-3">
-                                <label for="contact" class="form-label">Voting ID or Group ID</label>
-                                <input type="text" class="form-control" id="contact" name="contact" 
-                                       placeholder="Enter your Voting ID or Group ID" required>
-                            </div>
-                            
-                            <!-- Profile Image -->
-                            <div class="mb-3">
-                                <label for="image" class="form-label">Profile Image (Optional)</label>
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                                <small class="form-text text-muted">Allowed: JPG, PNG, GIF</small>
-                            </div>
-                            
                             <!-- Role Selection -->
                             <div class="mb-3">
                                 <label for="role" class="form-label">Role</label>
@@ -70,14 +44,14 @@
                                 </select>
                             </div>
                             
-                            <!-- Submit Button -->
+                            <!-- Login Button -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">Register Now</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Login</button>
                             </div>
                             
-                            <!-- Login Link -->
+                            <!-- Register Link -->
                             <div class="text-center mt-3">
-                                <p>Already have an account? <a href="../index.php" class="text-decoration-none">Login here</a></p>
+                                <p>Don't have an account? <a href="routes/register.html" class="text-decoration-none">Register here</a></p>
                             </div>
                             
                         </form>

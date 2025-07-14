@@ -3,12 +3,12 @@
 include_once '../config.php';
 session_start();
 
-// Check if user is logged in as voter
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] != 'voter') {
-    // Not logged in or not a voter
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Not logged in
     echo "<script>
-        alert('Please login as a voter to cast your vote.');
-        window.location.href = '../index.html';
+        alert('Please login to cast your vote.');
+        window.location.href = '../index.php';
     </script>";
     exit;
 }

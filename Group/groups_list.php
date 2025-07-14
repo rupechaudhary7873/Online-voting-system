@@ -54,10 +54,10 @@ if (!$results) {
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Sno.</th>
                                 <th>Username</th>
                                 <th>Email</th>
-                                <th>Contact</th>
+                                <th>Group ID</th>
                                 <th>Votes</th>
                                 <th>Status</th>
                                 <th>Photo</th>
@@ -94,11 +94,11 @@ if (!$results) {
                                 
                                 // Admin actions - toggle status
                                 if ($is_admin) {
-                                    $action_text = (isset($user['status']) && $user['status'] == 1) ? 
+                                    $action_text = (isset($user['status']) && $user['status'] == 0) ? 
                                         'Deactivate' : 'Activate';
-                                    $btn_class = (isset($user['status']) && $user['status'] == 1) ? 
-                                        'btn-outline-danger' : 'btn-outline-success';
-                                    
+                                    $btn_class = (isset($user['status']) && $user['status'] == 0) ? 
+                                        'btn-outline-success' : 'btn-outline-danger';
+
                                     echo "<td>
                                         <a href='groups_list.php?toggle_status=1&id={$user['id']}' 
                                            class='btn btn-sm {$btn_class}' 
